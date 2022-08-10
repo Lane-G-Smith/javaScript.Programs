@@ -1,5 +1,5 @@
-var output = [];
-var count = 1;
+let output = [];
+let count = 1;
 
 function fizzBuzzWL() {
     

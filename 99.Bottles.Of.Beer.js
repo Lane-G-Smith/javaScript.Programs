@@ -1,4 +1,4 @@
-var bottles = 99;
+let bottles = 99;
 
 function onTheWall() {
     

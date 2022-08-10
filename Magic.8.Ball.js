@@ -1,10 +1,9 @@
 alert("I am the magical AI 8 ball. Ask me any yes or no questions and I will give you an answer");
 prompt("What is your question?");
 
-var n = Math.random();
+let n = Math.random();
 n = n * 100;
 n = Math.floor(n) + 1;
-// alert("You have a " + ButtStuffLikelyhood + "%" + " chance of butt stuff in your future!");
 
  if (n >= 91 && n <= 100) {
      alert("ask again later");

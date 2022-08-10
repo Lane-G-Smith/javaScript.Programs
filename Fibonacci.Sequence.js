@@ -1,4 +1,4 @@
-var output = [];
+let output = [];
 
 function fibonacci () {
     if (n === 1) {
