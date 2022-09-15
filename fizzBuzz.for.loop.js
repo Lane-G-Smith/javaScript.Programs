@@ -1,16 +1,12 @@
-let output = [];
+let number = parseInt(prompt("Give me a number between 1 and 100"));
 
-function fizzBuzzFL() {
-    for (let count = 1; count < 101; count++) {
-        if (count % 3 === 0 && count % 5 === 0) {
-            output.push ("fizzBuzz");
-        } else if (count % 3 === 0) {
-            output.push("fizz"); 
-        } else if (count % 5 === 0) {
-            output.push("buzz");
-        } else {
-            output.push(count);
-        }   
-    }
-     console.log(output);
-}
+for (let i = 1; i <= number; i++) {
+     if (i % 3 === 0 && i % 5 ===0) {
+        console.log("fizzbuzz"); }
+     else if (i % 3 === 0) {
+        console.log("fizz"); }
+     else if (i % 5 === 0) {
+         console.log("buzz"); }
+     else {
+         console.log(i); }
+};
