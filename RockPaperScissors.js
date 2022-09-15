@@ -1,4 +1,5 @@
-let input = prompt("please type rock, paper, or scissors");
+let initialInput = prompt("please type rock, paper, or scissors");
+let input = (initialInput.toLowerCase());
 let number = (Math.random() * 3);
 let response = Math.round(number);
 
@@ -21,3 +22,4 @@ else if (input == ("scissors") && response == (2)) {
     alert("Scissors! you win!");
 }
 else alert("It's a tie, try again");
+
