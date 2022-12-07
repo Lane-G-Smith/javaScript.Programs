@@ -1,2 +1,2 @@
 # javaScript.Programs
-Simple programs using javaScript from various sources of educational materials as well as a few that I made up or modified along the way.
+A library of short and simple javascript programs made from various sources throughout the internet as well as a few that I made up and modified along the way.
