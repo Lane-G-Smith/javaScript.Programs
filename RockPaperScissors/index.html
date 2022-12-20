@@ -4,8 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <title>Document</title>
-<body>
-    <h1>THIS IS A ROCK PAPER SCISSORS PROGRAM CREATED WHILE COMPLETING THE ODIN PROJECT</H1>
+<body class="body">
+            <img src="casino.jpg" alt="casino" class="background-img">
+    <h1 class="heading__text">ROCK PAPER SCISSORS</H1>
+    <p class="rules__text">play 5 rounds, best of 5 wins</p>
+    <div class="options__player-choice">
+        <div class="options__player-choice__rock">rock</div>
+        <div class="options__player-choice__paper">paper</div>
+        <div class="options__player-choice__scissors">scissors</div>
+    </div>
+    <div class="scoreboard">
+        <div class="team__player">player score = </div>
+        <div class="scoreboard__player-score">0</div>
+        <div class="team__computer">computer score = </div>
+        <div class="scoreboard__computer-score">0</div>
+        
+    </div>
+    <p class="match-results"></p>
+    
     <script src="Main.js"></script>
 </body>

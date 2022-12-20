@@ -1,8 +1,7 @@
-
 console.log("here we go!");
 // identify in the console that the game has started
 
-const options = [ "rock", "paper", "scissors"];
+let options = [ "rock", "paper", "scissors"];
 // set the playable input options to an array [0,1,2]
 
 let playerScore = (0);
@@ -11,104 +10,104 @@ let playerScore = (0);
 let computerScore = (0);
 // set initial computer score
 
-let tieScore = (0);
-// srt initial tie score
-
-let playerChoice = prompt("type rock, paper, or scissors");
+playerChoice = prompt("type rock, paper, or scissors");
 // ask the player for input and store the player input as playerChoice
+
+let i = (computerScore + playerScore);
 
 playerChoice = playerChoice.toLowerCase();
 // change playerChoice to all lower case
 
-let check = () => (options.includes(playerChoice)) && (playerChoice != null)
-//check user input for empty or incorrect spelling/words
-
-let computerChoice = () => {
-    if ((check()) == true) {options[Math.floor(Math.random()*options.length)];}
-    else { [alert("You may have mistyped, please try again."),  playerChoice = prompt("type rock, paper, or scissors")
-]};
-}
-// randomly generate rock paper or scissors as long as the check is true for the computer
-console.log(computerChoice(options));
 console.log(playerChoice);
+// print to console for diagnostics
 
-let roundWin = () => {
-    if ((computerChoice() == ("rock")) && (playerChoice == ("paper"))) 
-    { 
-         [playerScore == (playerScore + (1)), console.log("I threw rock, you win!")];
+
+function check(options, playerChoice) {
+    if (options.includes(playerChoice) && (playerChoice != null)) {
+        return correctlyTyped = true }
+    else {
+        return correctlyTyped = false }
+};
+//check user input for empty or incorrectly spelled words. Return as variable correctlyTyped true/false
+
+check(options, playerChoice);
+// call the check function
+
+console.log(correctlyTyped);
+// print true/false to console for diagnostics
+
+let computerChoice = Math.floor(Math.random()*options.length);
+// randomly generate number between 0 and 1
+// multiply it by number of objects in array (3)
+// round to the nearest whole number
+// store number in variable computerChoice
+
+console.log(computerChoice);
+// print computerChoice to console for diagnostic purposes
+
+function roundWin(computerChoice, playerChoice){  
+        if ((computerChoice == ("0")) && (playerChoice == ("paper"))) 
+        { 
+            [playerScore++, console.log("Computer throws rock, you win!")];
+        }
+        else if ((computerChoice == ("0")) && (playerChoice == ("scissors"))) 
+        {
+            return [computerScore++, console.log("Computer throws rock, you lose!")] 
+        }
+        else if ((computerChoice == ("0")) && (playerChoice == ("rock")))
+        {
+            return console.log("Computer throws rock, it's a tie!")
+        }
+        else if ((computerChoice == ("1")) && (playerChoice == ("paper"))) 
+        {
+            return console.log("Computer throws paper, it's a tie!")
+        }
+        else if ((computerChoice == ("1")) && (playerChoice == ("scissors"))) 
+        {
+            return [playerScore++, console.log("Computer throws paper, you win!")]
+        }
+        else if ((computerChoice == ("1")) && (playerChoice == ("rock"))) 
+        {
+            return [computerScore++, console.log("Computer throws paper, you lose")]
+        }
+        else if ((computerChoice == ("2")) && (playerChoice == ("paper"))) 
+        {
+            return [computerScore++, console.log("Computer throws scissors, you lose!")]
+        }
+        else if ((computerChoice == ("2")) && (playerChoice == ("scissors"))) 
+        {
+            return console.log("Computer throws scissors, it's a tie!")
+        }
+        else if ((computerChoice == ("2")) && (playerChoice == ("rock"))) 
+        {
+            return [playerScore++, console.log("Computer throws scissors, you win!")]
+        }      
     }
-    else if ((computerChoice() == ("rock")) && (playerChoice == ("scissors"))) 
-    {
-        return [computerScore = (computerScore + (1)), console.log("I threw rock, I win!")] 
+
+roundWin(computerChoice, playerChoice);
+// call the function to play a hand
+
+const gameRounds = () => {
+    for (let i = 0; i < 5; 1++) {
+        const playerChoice = prompt("type rock, paper, or scissors");
+        const computerChoice = Math.floor(Math.random()*options.length);options;
+        roundWin(computerChoice, playerChoice);
     }
-    else if ((computerChoice() == ("rock")) && (playerChoice == ("rock")))
-    {
-        return [tieScore == (tieScore + (1)), console.log("I threw rock, it's a tie!") ]
-    }
-    else if ((computerChoice() == ("paper")) && (playerChoice == ("paper"))) 
-    {
-        return [tieScore == (tieScore + (1)), console.log("I threw paper, it's a tie!")]
-    }
-    else if ((computerChoice() == ("paper")) && (playerChoice == ("scissors"))) 
-    {
-        return [playerScore == (playerScore + (1)), console.log("I threw paper, you win!")]
-    }
-    else if ((computerChoice() == ("paper")) && (playerChoice == ("rock"))) 
-    {
-        return [computerScore = (computerScore + (1)), console.log("I threw paper, I win!")]
-    }
-    else if ((computerChoice() == ("scissors")) && (playerChoice == ("paper"))) 
-    {
-        return [computerScore = (computerScore + (1)), console.log("I threw scissors, I win!")]
-    }
-    else if ((computerChoice() == ("scissors")) && (playerChoice == ("scissors"))) 
-    {
-    return [tieScore == (tieScore + (1)), console.log("I threw scissors, it's a tie!")]
-    }
-        else if ((computerChoice() == ("scissors")) && (playerChoice == ("rock"))) 
-    {
-    return [playerScore == (playerScore + (1)), console.log("I threw scissors, you win!")]
-    }      
 }
+// function adds 1 to each round played until i = 5
+// print result of each round winner
 
-// console.log(roundWin(computerChoice, playerChoice));
+gameRounds();
+// call the gameRound function
+
+console.log(playerScore);
+console.log(computerScore);
+// print the score of the hands played so far
+
+
+// roundWin(computerChoice, playerChoice);
+// console.log roundWin();
 // console.log the result of the match
 
 // add one to the counter for computer or player wins
-
-// start again
-
-
-
-
-
-
-
-
-function greet(){
-    console.log("balls");
-}
-// this is a FUNCTION DECLARATION. It's empty and uses the function word
-// function declarations get "hoisted" and are therefore read at the very top of the file
-
-greet();
-// call that function
-
-
-const speak = function(){
-
-};
-// this is called a FUNCTION EXPRESSION, and is the only time you use a semicolon after curly braces. when a const or let = function
-// function expressions do not get hoisted to the top of the page
-// you can only call this function when it is above the point on the page you try to call it from
-
-speak();
-// call that function
-
-
-const speak = function(){
-    console.log();
-};
-
-
 
