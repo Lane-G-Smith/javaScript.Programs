@@ -2,18 +2,21 @@ let output = [];
 let count = 1;
 
 function fizzBuzzWL() {
-    
-    while(count <=101) {
+    while(count <=100) {
         if (count % 3 === 0 && count % 5 === 0) {
             output.push ("fizzBuzz");
-        } else if (count % 3 === 0) {
+            }
+        else if (count % 3 === 0) {
             output.push("fizz"); 
-        } else if (count % 5 === 0) {
+            } 
+        else if (count % 5 === 0) {
             output.push("buzz");
-        } else {
+        }
+        else {
             output.push(count);
         }
-     count++;   
-    }
+        count++;
+        }
+}
+fizzBuzzWL();
 console.log(output);
-    }

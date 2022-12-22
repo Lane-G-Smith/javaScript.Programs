@@ -19,3 +19,8 @@ function fibonacci () {
     }
 return output;
 }
+fibonacci();
+
+// number is the sum of the two numbers before it
+//
+1,1,2,3,5,8,13
