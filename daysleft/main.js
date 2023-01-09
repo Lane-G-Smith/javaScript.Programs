@@ -17,11 +17,11 @@ let oneWeek = (oneDay*7);
 
 let oneMonth = ((oneDay*365)/12);
 
-// round up, subtract today date number from end date number, multiply by negative to get positive
-let totalDays = ((Math.ceil((endDay.getTime()-today.getTime())/(oneDay)))*-1);
-let totalWorkDays = (((Math.ceil((endDay.getTime()-today.getTime())/(oneDay)/7*5))*-1));
-let totalWeeks = ((Math.ceil((endDay.getTime()-today.getTime())/(oneWeek))*-1));
-let totalMonths = ((Math.ceil((endDay.getTime()-today.getTime())/(oneMonth))*-1));
+// round up, subtract today date number from end date number
+let totalDays = ((Math.ceil((endDay.getTime()-today.getTime())/(oneDay)))*1);
+let totalWorkDays = (((Math.ceil((endDay.getTime()-today.getTime())/(oneDay)/7*5))*1));
+let totalWeeks = ((Math.ceil((endDay.getTime()-today.getTime())/(oneWeek))*1));
+let totalMonths = ((Math.ceil((endDay.getTime()-today.getTime())/(oneMonth))*1));
 let totalWorkHours = totalWorkDays*8;
 
 // css class select and replace text with function output
