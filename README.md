@@ -1,2 +1,4 @@
-# javaScript.Programs
-A library of short and simple javascript programs made from various sources throughout the internet as well as a few that I made up and modified along the way.
+<h1 align="center">javaScript.Programs</h1><br>
+<p align="center">
+  A library of short and simple javascript programs designed to work inside of the browser with minimal styling and complexity.
+</p>
